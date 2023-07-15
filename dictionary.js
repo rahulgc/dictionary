@@ -24,14 +24,14 @@ const getMeaning = async () => {
         for (let i = 0; i <= 3; i++) {
           document.getElementById(
             "meaning"
-          ).innerHTML += `<h4><li id="meaning">${arr[i]}</li></h4></br>`;
+          ).innerHTML += `<li>${arr[i]}</li></br>`;
         }
       } else {
         for (let i = 0; i < arr.length; i++) {
           if (!(arr[i].toString() == "")) {
             document.getElementById(
               "meaning"
-            ).innerHTML += `<h4><li id="meaning">${arr[i]}</li></h4></br>`;
+            ).innerHTML += `<li>${arr[i]}</li></br>`;
           } else {
             document.getElementById("meaning").innerHTML +=
               "Sorry ! No meaning available for this word";
@@ -45,5 +45,5 @@ const getMeaning = async () => {
 };
 document.getElementById("button").addEventListener("click", () => {
   getMeaning();
-  document.getElementById("display").innerHTML= "";
+  document.getElementById("meaning").innerHTML= "";
 });
