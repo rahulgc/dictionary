@@ -23,15 +23,15 @@ const getMeaning = async () => {
       if (arr.length > 3) {
         for (let i = 0; i <= 3; i++) {
           document.getElementById(
-            "display"
-          ).innerHTML += `<h4><li id="meaning">${arr[i]}</li><h4></br>`;
+            "meaning"
+          ).innerHTML += `<li id="meaning">${arr[i]}</li></br>`;
         }
       } else {
         for (let i = 0; i < arr.length; i++) {
           if (!(arr[i].toString() == "")) {
             document.getElementById(
-              "display"
-            ).innerHTML += `<h4><li id="meaning">${arr[i]}</li><h4></br>`;
+              "meaning"
+            ).innerHTML += `<li id="meaning">${arr[i]}</li></br>`;
           } else {
             document.getElementById("meaning").innerHTML +=
               "Sorry ! No meaning available for this word";
