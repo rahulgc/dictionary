@@ -24,14 +24,14 @@ const getMeaning = async () => {
         for (let i = 0; i <= 3; i++) {
           document.getElementById(
             "meaning"
-          ).innerHTML += `<li id="meaning">${arr[i]}</li></br>`;
+          ).innerHTML += `<h4><li id="meaning">${arr[i]}</li></h4></br>`;
         }
       } else {
         for (let i = 0; i < arr.length; i++) {
           if (!(arr[i].toString() == "")) {
             document.getElementById(
               "meaning"
-            ).innerHTML += `<li id="meaning">${arr[i]}</li></br>`;
+            ).innerHTML += `<h4><li id="meaning">${arr[i]}</li></h4></br>`;
           } else {
             document.getElementById("meaning").innerHTML +=
               "Sorry ! No meaning available for this word";
