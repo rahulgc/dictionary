@@ -1,5 +1,12 @@
 const getMeaning = async () => {
   let word = document.getElementById("input").value;
+  document.getElementById("word").innerHTML = word
+    .toString()
+    .toLocaleUpperCase();
+  document.getElementById("load").innerHTML = ` <h4 class="loading">Loading...</h4>
+  <div class="progress">
+      <div class="color"></div>
+    </div>`;
 
   const url = `https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary?word=${word}`;
 
@@ -20,6 +27,7 @@ const getMeaning = async () => {
       let meaning = res.definition;
       let arr = meaning.split(";");
       console.log(arr);
+      document.getElementById("load").innerHTML ="";
       if (arr.length > 3) {
         for (let i = 0; i <= 3; i++) {
           document.getElementById(
@@ -45,5 +53,5 @@ const getMeaning = async () => {
 };
 document.getElementById("button").addEventListener("click", () => {
   getMeaning();
-  document.getElementById("meaning").innerHTML= "";
+  document.getElementById("meaning").innerHTML = "";
 });

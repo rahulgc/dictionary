@@ -16,6 +16,15 @@ body{
 h1{
     text-align: center;
     margin-bottom: 10px;
+    padding: 10px;
+}
+h3{
+    text-align: center;
+    margin-top: 20px;
+}
+.loading{
+    text-align: center;
+    margin-top: 20px;
 }
 .text{
     width: 300px;
@@ -25,8 +34,40 @@ h1{
     height: 30px;
 }
 .display{
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
-    padding: 20px;
+    padding: 10px;
 }
+.progress{
+    height: 10px;
+    width: 10%;
+    border: 10px solid #4c4949;
+    border-radius: 15px;
+    margin-left: 45%;
+}
+.progress .color{
+    background-color: #020202;
+    width: 0px;
+    height: 10px;
+    border-radius: 15px;
+    animation: progres 4s infinite linear;  
+}
+@keyframes progres{
+    0%{
+      width: 0%;
+    }
+    25%{
+        width: 50%;
+    }
+    50%{
+        width: 75%;
+    }
+    75%{
+        width: 85%;
+    }
+    100%{
+        width: 100%;
+    }
+};
