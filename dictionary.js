@@ -1,5 +1,4 @@
 const getMeaning = async () => {
-  document.getElementById("meaning").innerHTML = "";
   let word = document.getElementById("input").value;
 
   const url = `https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary?word=${word}`;
@@ -24,15 +23,15 @@ const getMeaning = async () => {
       if (arr.length > 3) {
         for (let i = 0; i <= 3; i++) {
           document.getElementById(
-            "meaning"
+            "display"
           ).innerHTML += `<li id="meaning">${arr[i]}</li></br>`;
         }
       } else {
         for (let i = 0; i < arr.length; i++) {
           if (!(arr[i].toString() == "")) {
             document.getElementById(
-              "meaning"
-            ).innerHTML += `<li id="meaning">${arr[i]}</li></br>`;
+              "display"
+            ).innerHTML += `<h3><li id="meaning">${arr[i]}</li><h3></br>`;
           } else {
             document.getElementById("meaning").innerHTML +=
               "Sorry ! No meaning available for this word";
@@ -46,4 +45,5 @@ const getMeaning = async () => {
 };
 document.getElementById("button").addEventListener("click", () => {
   getMeaning();
+  document.getElementById("display").innerHTML= "";
 });
